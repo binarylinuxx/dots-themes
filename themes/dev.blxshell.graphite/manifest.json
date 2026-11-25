@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.graphite",
+  "name": "Graphite",
+  "version": "1.0.0",
+  "description": "Grey Material shapes on true black, with monochrome colours and black surfaces for OLED screens.",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "amoled",
+    "monochrome",
+    "shapes",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "generated",
+    "source": "wallpaper",
+    "scheme": "monochrome",
+    "mode": "dark",
+    "preset": "amoled"
+  }
+}

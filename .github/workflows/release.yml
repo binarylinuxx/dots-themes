@@ -1,0 +1,46 @@
+name: release packages
+
+# Builds every package into a .blx and publishes them, with index.json, to
+# the rolling "packages" release. `blxshell install <id>` downloads from it:
+#   https://github.com/<owner>/<repo>/releases/download/packages/index.json
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-packages
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install jsonschema
+      - run: python3 tools/validate.py
+      - run: python3 tools/build.py --out build
+      - name: Publish to the "packages" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! gh release view packages >/dev/null 2>&1; then
+            gh release create packages --title "Packages" --latest=false \
+              --notes "Prebuilt .blx packages and index.json, rebuilt on every change to main. Install with: blxshell install <id>"
+          fi
+          gh release upload packages build/* --clobber
+          # Drop files from older versions that are no longer built.
+          keep=$(ls build)
+          gh release view packages --json assets --jq '.assets[].name' | while read -r asset; do
+            if ! grep -qxF "$asset" <<<"$keep"; then
+              gh release delete-asset packages "$asset" --yes
+            fi
+          done

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.tide",
+  "name": "Tide",
+  "version": "1.0.0",
+  "description": "A night sea under the moon, with deep blue and teal colours generated from it.",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "blue",
+    "landscape",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "generated",
+    "source": "wallpaper",
+    "scheme": "vibrant",
+    "mode": "dark"
+  }
+}
