@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.tokyo-night",
+  "name": "Tokyo Night",
+  "version": "1.0.0",
+  "description": "The Tokyo Night colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Tokyo Night by enkia (github.com/enkia/tokyo-night-vscode-theme).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "neon",
+    "blue",
+    "night",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#7aa2f7",
+      "primaryText": "#16161e",
+      "primaryContainer": "#394669",
+      "secondary": "#7dcfff",
+      "secondaryContainer": "#3a556b",
+      "tertiary": "#bb9af7",
+      "tertiaryContainer": "#4e4469",
+      "error": "#f7768e",
+      "errorText": "#16161e",
+      "errorContainer": "#613847",
+      "errorContainerText": "#d0b1d6",
+      "surface": "#1a1b26",
+      "surfaceContainerLow": "#16161e",
+      "surfaceContainer": "#24283b",
+      "surfaceContainerHigh": "#292e42",
+      "surfaceContainerHighest": "#414868",
+      "surfaceVariant": "#414868",
+      "text": "#c0caf5",
+      "textMuted": "#a9b1d6",
+      "outline": "#565f89",
+      "outlineVariant": "#414868"
+    }
+  }
+}

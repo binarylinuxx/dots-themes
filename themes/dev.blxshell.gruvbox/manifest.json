@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.gruvbox",
+  "name": "Gruvbox",
+  "version": "1.0.0",
+  "description": "The Gruvbox colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Gruvbox by Pavel Pertsev (github.com/morhetz/gruvbox).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "retro",
+    "warm",
+    "yellow",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#fabd2f",
+      "primaryText": "#1d2021",
+      "primaryContainer": "#6b582a",
+      "secondary": "#8ec07c",
+      "secondaryContainer": "#495943",
+      "tertiary": "#fe8019",
+      "tertiaryContainer": "#6c4423",
+      "error": "#fb4934",
+      "errorText": "#1d2021",
+      "errorContainer": "#6c332c",
+      "errorContainerText": "#f0af8c",
+      "surface": "#282828",
+      "surfaceContainerLow": "#1d2021",
+      "surfaceContainer": "#3c3836",
+      "surfaceContainerHigh": "#504945",
+      "surfaceContainerHighest": "#665c54",
+      "surfaceVariant": "#665c54",
+      "text": "#ebdbb2",
+      "textMuted": "#bdae93",
+      "outline": "#928374",
+      "outlineVariant": "#665c54"
+    }
+  }
+}

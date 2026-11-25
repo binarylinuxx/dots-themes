@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.dracula",
+  "name": "Dracula",
+  "version": "1.0.0",
+  "description": "The Dracula colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Dracula (draculatheme.com).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "vivid",
+    "purple",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#bd93f9",
+      "primaryText": "#191a21",
+      "primaryContainer": "#584c74",
+      "secondary": "#ff79c6",
+      "secondaryContainer": "#6d4364",
+      "tertiary": "#8be9fd",
+      "tertiaryContainer": "#486776",
+      "error": "#ff5555",
+      "errorText": "#191a21",
+      "errorContainer": "#6d3840",
+      "errorContainerText": "#fac7c3",
+      "surface": "#282a36",
+      "surfaceContainerLow": "#21222c",
+      "surfaceContainer": "#343746",
+      "surfaceContainerHigh": "#44475a",
+      "surfaceContainerHighest": "#565970",
+      "surfaceVariant": "#565970",
+      "text": "#f8f8f2",
+      "textMuted": "#bfbfbf",
+      "outline": "#6272a4",
+      "outlineVariant": "#565970"
+    }
+  }
+}

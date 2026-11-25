@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.catppuccin-mocha",
+  "name": "Catppuccin Mocha",
+  "version": "1.0.0",
+  "description": "The Catppuccin Mocha colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Catppuccin (github.com/catppuccin).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "pastel",
+    "purple",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#cba6f7",
+      "primaryText": "#11111b",
+      "primaryContainer": "#554a6e",
+      "secondary": "#89b4fa",
+      "secondaryContainer": "#404e6f",
+      "tertiary": "#f5c2e7",
+      "tertiaryContainer": "#635269",
+      "error": "#f38ba8",
+      "errorText": "#11111b",
+      "errorContainer": "#624155",
+      "errorContainerText": "#d8c0dd",
+      "surface": "#1e1e2e",
+      "surfaceContainerLow": "#181825",
+      "surfaceContainer": "#313244",
+      "surfaceContainerHigh": "#45475a",
+      "surfaceContainerHighest": "#585b70",
+      "surfaceVariant": "#585b70",
+      "text": "#cdd6f4",
+      "textMuted": "#a6adc8",
+      "outline": "#7f849c",
+      "outlineVariant": "#585b70"
+    }
+  }
+}

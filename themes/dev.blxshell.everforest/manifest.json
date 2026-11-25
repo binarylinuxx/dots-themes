@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.everforest",
+  "name": "Everforest",
+  "version": "1.0.0",
+  "description": "The Everforest colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Everforest by sainnhe (github.com/sainnhe/everforest).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "green",
+    "forest",
+    "soft",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#a7c080",
+      "primaryText": "#1e2326",
+      "primaryContainer": "#455149",
+      "secondary": "#83c092",
+      "secondaryContainer": "#3e514c",
+      "tertiary": "#dbbc7f",
+      "tertiaryContainer": "#505049",
+      "error": "#e67e80",
+      "errorText": "#1e2326",
+      "errorContainer": "#524449",
+      "errorContainerText": "#d9b09d",
+      "surface": "#2d353b",
+      "surfaceContainerLow": "#232a2e",
+      "surfaceContainer": "#343f44",
+      "surfaceContainerHigh": "#3d484d",
+      "surfaceContainerHighest": "#475258",
+      "surfaceVariant": "#475258",
+      "text": "#d3c6aa",
+      "textMuted": "#9da9a0",
+      "outline": "#7a8478",
+      "outlineVariant": "#475258"
+    }
+  }
+}

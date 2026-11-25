@@ -6,8 +6,9 @@
 With no names it draws them all. Each theme folder gets wallpaper.png at the
 full size and preview.jpg (960x540) for the store. Needs Pillow and numpy.
 
-Every theme's colours are generated from its wallpaper (colours.source
-"wallpaper"), so the shell always matches the picture.
+The first five themes generate their colours from the wallpaper. The
+colour-scheme themes (tools/schemes.py) are the other way round: their
+wallpaper is drawn from the scheme's palette by the generic designs below.
 """
 import argparse
 import math
@@ -15,6 +16,8 @@ import os
 
 import numpy as np
 from PIL import Image, ImageDraw
+
+from schemes import SCHEMES, mix
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCALE = 2  # drawn at twice the size, then reduced: smooth edges
@@ -163,7 +166,64 @@ def meadow(w, h):
     return image
 
 
+# --- Generic designs, for the colour-scheme themes ---------------------------
+
+HILLS = [[(0.035, 1, 0.4), (0.015, 3, 1.3)], [(0.045, 1, 2.2), (0.012, 4, 0.2)], [(0.05, 1, 4.0), (0.016, 2.5, 1.0)],
+         [(0.045, 1.2, 0.9), (0.014, 3.5, 2.7)], [(0.04, 0.8, 3.1), (0.012, 3, 0.5)]]
+WAVES = [[(0.012, 3, 0.3), (0.006, 9, 1.0)], [(0.016, 2.5, 1.7), (0.007, 8, 2.1)], [(0.02, 2, 0.6), (0.008, 7, 3.0)],
+         [(0.024, 1.6, 2.4), (0.009, 6, 0.4)], [(0.026, 1.3, 4.1), (0.01, 5, 1.6)]]
+
+
+def layered(w, h, p, shapes, bases, sun_at, sun_size, stars=False):
+    """Sky, a sun or moon, then five bands blending from p["far"] to p["near"]."""
+    image = sky(w, h, p["sky"][0], p["sky"][1], horizon=0.62)
+    draw = ImageDraw.Draw(image)
+    disc(draw, sun_at[0] * w, sun_at[1] * h, sun_size * h, hex_rgb(p["sun"]))
+    if stars:
+        star = mix(p["sun"], p["sky"][0], 0.2)
+        for x, y, r in [(0.42, 0.12, 4), (0.55, 0.22, 3), (0.71, 0.09, 5), (0.83, 0.28, 3), (0.9, 0.14, 4),
+                        (0.1, 0.4, 3), (0.62, 0.36, 3), (0.35, 0.33, 2.5)]:
+            disc(draw, x * w, y * h, r * h / 1080, hex_rgb(star))
+    for index, (waves, base) in enumerate(zip(shapes, bases)):
+        draw.polygon(ridge(w, h, base, waves), fill=hex_rgb(mix(p["far"], p["near"], index / 4)))
+    return image
+
+
+def landscape(w, h, p):
+    return layered(w, h, p, HILLS, [0.56, 0.63, 0.71, 0.80, 0.90], (0.68, 0.47), 0.115)
+
+
+def sea(w, h, p):
+    return layered(w, h, p, WAVES, [0.58, 0.65, 0.73, 0.82, 0.91], (0.24, 0.24), 0.075, stars=True)
+
+
+def shapes(w, h, p, background):
+    """Material shapes: accents c0..c3, quiet shapes c4 and c5."""
+    c = p["colours"]
+    image = Image.new("RGB", (w, h), hex_rgb(background))
+    draw = ImageDraw.Draw(image)
+    u = h / 2160
+    draw.polygon(polar(0.70 * w, 0.58 * h, 560 * u, cookie(9, 0.075), 0.3), fill=hex_rgb(c[4]))
+    draw.polygon(polar(0.70 * w, 0.58 * h, 410 * u, cookie(9, 0.075), 0.3), fill=hex_rgb(mix(c[0], c[4], 0.35)))
+    draw.polygon(polar(0.22 * w, 0.30 * h, 330 * u, cookie(4, 0.2), math.pi / 4), fill=hex_rgb(c[5]))
+    draw.polygon(polar(0.33 * w, 0.72 * h, 160 * u, cookie(12, 0.09)), fill=hex_rgb(c[1]))
+    pill(image, 0.42 * w, 0.42 * h, 880 * u, 210 * u, 24, c[2])
+    draw = ImageDraw.Draw(image)
+    for x, y, r, colour in [(0.54, 0.18, 44, c[3]), (0.12, 0.62, 66, c[4]), (0.88, 0.22, 34, c[1]),
+                            (0.9, 0.86, 52, c[0])]:
+        disc(draw, x * w, y * h, r * u, hex_rgb(colour))
+    return image
+
+
+def scheme_design(scheme):
+    p = scheme["wallpaper"]
+    if p["design"] == "shapes":
+        return lambda w, h: shapes(w, h, p, scheme["layers"][2])
+    return lambda w, h: {"landscape": landscape, "sea": sea}[p["design"]](w, h, p)
+
+
 DESIGNS = {"dune": dune, "tide": tide, "bloom": bloom, "graphite": graphite, "meadow": meadow}
+DESIGNS.update({key: scheme_design(scheme) for key, scheme in SCHEMES.items()})
 
 
 def main():

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.kanagawa",
+  "name": "Kanagawa",
+  "version": "1.0.0",
+  "description": "The Kanagawa colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Kanagawa by rebelot (github.com/rebelot/kanagawa.nvim).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "ink",
+    "blue",
+    "japanese",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#7e9cd8",
+      "primaryText": "#16161d",
+      "primaryContainer": "#3d4760",
+      "secondary": "#7aa89f",
+      "secondaryContainer": "#3c4b4e",
+      "tertiary": "#957fb8",
+      "tertiaryContainer": "#453e56",
+      "error": "#e46876",
+      "errorText": "#16161d",
+      "errorContainer": "#5e3641",
+      "errorContainerText": "#deb6a6",
+      "surface": "#1f1f28",
+      "surfaceContainerLow": "#1a1a22",
+      "surfaceContainer": "#2a2a37",
+      "surfaceContainerHigh": "#363646",
+      "surfaceContainerHighest": "#54546d",
+      "surfaceVariant": "#54546d",
+      "text": "#dcd7ba",
+      "textMuted": "#c8c093",
+      "outline": "#727169",
+      "outlineVariant": "#54546d"
+    }
+  }
+}

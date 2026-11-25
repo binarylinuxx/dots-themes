@@ -22,6 +22,42 @@
     {
       "id": "dev.blxshell.meadow",
       "path": "themes/dev.blxshell.meadow"
+    },
+    {
+      "id": "dev.blxshell.catppuccin-mocha",
+      "path": "themes/dev.blxshell.catppuccin-mocha"
+    },
+    {
+      "id": "dev.blxshell.catppuccin-latte",
+      "path": "themes/dev.blxshell.catppuccin-latte"
+    },
+    {
+      "id": "dev.blxshell.gruvbox",
+      "path": "themes/dev.blxshell.gruvbox"
+    },
+    {
+      "id": "dev.blxshell.nord",
+      "path": "themes/dev.blxshell.nord"
+    },
+    {
+      "id": "dev.blxshell.tokyo-night",
+      "path": "themes/dev.blxshell.tokyo-night"
+    },
+    {
+      "id": "dev.blxshell.rose-pine",
+      "path": "themes/dev.blxshell.rose-pine"
+    },
+    {
+      "id": "dev.blxshell.everforest",
+      "path": "themes/dev.blxshell.everforest"
+    },
+    {
+      "id": "dev.blxshell.dracula",
+      "path": "themes/dev.blxshell.dracula"
+    },
+    {
+      "id": "dev.blxshell.kanagawa",
+      "path": "themes/dev.blxshell.kanagawa"
     }
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/binarylinuxx/dots/main/schemas/manifest.schema.json",
+  "schema": 1,
+  "type": "theme",
+  "id": "dev.blxshell.nord",
+  "name": "Nord",
+  "version": "1.0.0",
+  "description": "The Nord colour scheme for the whole shell and Ghostty, with a wallpaper in its palette. Palette: Nord by Arctic Ice Studio (nordtheme.com).",
+  "authors": [
+    {
+      "name": "binarylinuxx",
+      "url": "https://github.com/binarylinuxx"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/binarylinuxx/dots-themes",
+  "tags": [
+    "dark",
+    "colour scheme",
+    "cool",
+    "blue",
+    "arctic",
+    "wallpaper"
+  ],
+  "previews": [
+    "preview.jpg"
+  ],
+  "project": "blxshell",
+  "blxshell": ">=0.1.0",
+  "compositors": [
+    "any"
+  ],
+  "wallpaper": "wallpaper.png",
+  "colours": {
+    "kind": "static",
+    "roles": {
+      "primary": "#88c0d0",
+      "primaryText": "#242933",
+      "primaryContainer": "#4b616e",
+      "secondary": "#81a1c1",
+      "secondaryContainer": "#495769",
+      "tertiary": "#b48ead",
+      "tertiaryContainer": "#595163",
+      "error": "#bf616a",
+      "errorText": "#ffffff",
+      "errorContainer": "#5c424d",
+      "errorContainerText": "#dec4cb",
+      "surface": "#2e3440",
+      "surfaceContainerLow": "#2a303c",
+      "surfaceContainer": "#3b4252",
+      "surfaceContainerHigh": "#434c5e",
+      "surfaceContainerHighest": "#4c566a",
+      "surfaceVariant": "#4c566a",
+      "text": "#eceff4",
+      "textMuted": "#d8dee9",
+      "outline": "#7b88a1",
+      "outlineVariant": "#4c566a"
+    }
+  }
+}
